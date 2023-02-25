@@ -7,11 +7,36 @@
     <meta name="description" content="Clicker. Click the button, that score points, which you can exchange for upgrades and boosts. Apples are main topic">
     <meta name="keywords" content="Apple, Clicker, Game, Score, Level">
     <meta name="author" content="Adam Stajer">
+    <!-- Google fonts - League Spartan -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+
     <title>Apple Clicker</title>
     <link rel="stylesheet" href="CSS/main.css">
     <script src="Script/script.js" defer></script>
 </head>
 <body>
-    
+    <header class="header">
+        <h1 class="header__title">Apple Clicker</h1>
+    </header>
+    <main class="main">
+        <img src="IMG/apple.png" alt="Apple image. Click here" class="apple-img">
+        <div class="upgrades-container">
+            <div class="upgrade upgrade__container">
+                <h2 class="upgrade__title">Boost</h2>
+                <div class="upgrade__div"><span class="upgrade__text">x2 (xyz apple)</span></div>
+                <div class="upgrade__div"><span class="upgrade__text">x5 (xyz apple)</span></div>
+                <div class="upgrade__div"><span class="upgrade__text">x10 (xyz apple)</span></div>
+            </div>
+            <div class="upgrade upgrade__container">
+                <h2 class="upgrade__title">Auto click</h2>
+                <h2 class="upgrade__title">Boost</h2>
+                <div class="upgrade__div"><span class="upgrade__text">10 apples/sec (xyz apple)</span></div>
+                <div class="upgrade__div"><span class="upgrade__text">25 apples/sec (xyz apple)</span></div>
+                <div class="upgrade__div"><span class="upgrade__text">50 apples/sec (xyz apple)</span></div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

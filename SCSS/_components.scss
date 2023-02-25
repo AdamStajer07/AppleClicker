@@ -1,0 +1,55 @@
+.header {
+    width: 80%;
+    margin: 3rem auto;
+    &__title {
+        text-align: center;
+        font-size: 6rem;
+        color: $green;
+    }
+}
+.main {
+    width: 80%;
+    margin: auto;
+    
+    display: flex;
+    justify-content: space-evenly;
+    .apple-img {
+        width: clamp(300px, 40%, 600px);
+        transition: filter .5s;
+        &:hover {
+            cursor: pointer;
+            filter: brightness(.85);
+        }
+    }
+    .upgrades-container {
+        width: clamp(300px, 50%, 600px);
+    }
+    .upgrade {
+        color: $white;
+        &__container {
+            margin: 2rem 0;
+        }
+        &__title {
+            font-size: 3rem;
+            text-indent: 32px;
+        }
+        &__div {
+            width: clamp(300px, 60%, 500px);
+            background-color: $green;
+            min-height: 30px;
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 1rem;
+            transition: background-color .5s;
+            &:hover {
+                cursor: pointer;
+                background-color: darken($green, 10%);
+            }
+        }
+        &__text {
+            color: $black;
+            font-weight: bold;
+            font-size: 1.75rem;
+        }
+    }
+}

@@ -3,4 +3,65 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  background-color: #000;
+}
+
+.header {
+  width: 80%;
+  margin: 3rem auto;
+}
+.header__title {
+  text-align: center;
+  font-size: 6rem;
+  color: #65981d;
+}
+
+.main {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.main .apple-img {
+  width: clamp(300px, 40%, 600px);
+  transition: filter 0.5s;
+}
+.main .apple-img:hover {
+  cursor: pointer;
+  filter: brightness(0.85);
+}
+.main .upgrades-container {
+  width: clamp(300px, 50%, 600px);
+}
+.main .upgrade {
+  color: #fff;
+}
+.main .upgrade__container {
+  margin: 2rem 0;
+}
+.main .upgrade__title {
+  font-size: 3rem;
+  text-indent: 32px;
+}
+.main .upgrade__div {
+  width: clamp(300px, 60%, 500px);
+  background-color: #65981d;
+  min-height: 30px;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: background-color 0.5s;
+}
+.main .upgrade__div:hover {
+  cursor: pointer;
+  background-color: #496d15;
+}
+.main .upgrade__text {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.75rem;
 }/*# sourceMappingURL=main.css.map */
