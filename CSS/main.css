@@ -17,7 +17,7 @@ body {
 .header__title {
   text-align: center;
   font-size: 6rem;
-  color: #65981d;
+  color: #8db600;
 }
 
 .main {
@@ -26,13 +26,18 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
-.main .apple-img {
-  width: clamp(300px, 40%, 600px);
+.main .apple__img {
+  width: clamp(300px, 90%, 600px);
   transition: filter 0.5s;
 }
-.main .apple-img:hover {
+.main .apple__img:hover {
   cursor: pointer;
   filter: brightness(0.85);
+}
+.main .apple__score-container {
+  color: #fff;
+  font-size: 2rem;
+  text-indent: 10rem;
 }
 .main .upgrades-container {
   width: clamp(300px, 50%, 600px);
@@ -49,7 +54,7 @@ body {
 }
 .main .upgrade__div {
   width: clamp(300px, 60%, 500px);
-  background-color: #65981d;
+  background-color: #8db600;
   min-height: 30px;
   margin: 1rem;
   padding: 1rem;
@@ -58,7 +63,7 @@ body {
 }
 .main .upgrade__div:hover {
   cursor: pointer;
-  background-color: #496d15;
+  background-color: #658300;
 }
 .main .upgrade__text {
   color: #000;

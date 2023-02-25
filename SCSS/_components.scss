@@ -13,12 +13,19 @@
     
     display: flex;
     justify-content: space-evenly;
-    .apple-img {
-        width: clamp(300px, 40%, 600px);
-        transition: filter .5s;
-        &:hover {
-            cursor: pointer;
-            filter: brightness(.85);
+    .apple {
+        &__img {
+            width: clamp(300px, 90%, 600px);
+            transition: filter .5s;
+            &:hover {
+                cursor: pointer;
+                filter: brightness(.85);
+            }
+        }
+        &__score-container {
+            color: $white;
+            font-size: 2rem;
+            text-indent: 10rem;
         }
     }
     .upgrades-container {
