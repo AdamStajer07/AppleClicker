@@ -73,3 +73,4 @@ x50autoclick.addEventListener('click', () => {
         x50autoclick.style.display = 'none';
     }
 })
+// Test
