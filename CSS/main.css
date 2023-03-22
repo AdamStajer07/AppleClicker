@@ -28,11 +28,11 @@ body {
 }
 .main .apple__img {
   width: clamp(300px, 90%, 600px);
-  transition: filter 0.5s;
+  transition: all 0.5s ease;
 }
 .main .apple__img:hover {
   cursor: pointer;
-  filter: brightness(0.85);
+  filter: brightness(0.9);
 }
 .main .apple__score-container {
   color: #fff;
@@ -60,6 +60,7 @@ body {
   padding: 1rem;
   border-radius: 1rem;
   transition: background-color 0.5s;
+  display: none;
 }
 .main .upgrade__div:hover {
   cursor: pointer;

@@ -16,10 +16,10 @@
     .apple {
         &__img {
             width: clamp(300px, 90%, 600px);
-            transition: filter .5s;
+            transition: all 0.5s ease;
             &:hover {
                 cursor: pointer;
-                filter: brightness(.85);
+                filter: brightness(.9);
             }
         }
         &__score-container {
@@ -52,6 +52,7 @@
                 cursor: pointer;
                 background-color: darken($green, 10%);
             }
+            display: none;
         }
         &__text {
             color: $black;
