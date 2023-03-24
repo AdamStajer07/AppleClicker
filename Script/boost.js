@@ -41,7 +41,7 @@ x25Boost.addEventListener('click', () => {
         boostInfo = 25;
         scoreInfo.innerHTML -= 600;
         x25Boost.style.display = 'none';
-        appleIcon.setAttribute('src', 'img/apple2.png')
+        appleIcon.setAttribute('src', 'IMG/apple2.png')
         appleIcon.style.filter = 'none';
     }
 
