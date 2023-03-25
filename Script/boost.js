@@ -7,97 +7,165 @@ const x100Boost = document.querySelector('.x100boost');
 const x200Boost = document.querySelector('.x200boost');
 const x400Boost = document.querySelector('.x400boost');
 const x600Boost = document.querySelector('.x600boost');
+const x750Boost = document.querySelector('.x750boost');
+const x1000Boost = document.querySelector('.x1000boost');
+
+const boostArray = [
+    x2Boost,
+    x5Boost,
+    x10Boost, 
+    x25Boost, 
+    x50Boost, 
+    x100Boost,
+    x200Boost,
+    x400Boost,
+    x600Boost,
+    x750Boost,
+    x1000Boost
+]
 
 x2Boost.style.display = 'block';
 x5Boost.style.display = 'block';
 x10Boost.style.display = 'block';
 
-x2Boost.addEventListener('click', () => {
+boostArray[0].addEventListener('click', () => {
     if(scoreInfo.innerHTML >= 20) {
         appleIcon.style.filter = 'brightness(1.1) contrast(0.99) hue-rotate(19deg)';
         boostInfo = 2;
         scoreInfo.innerHTML -= 10;
-        x2Boost.style.display = 'none';
-        x25Boost.style.display = 'block';
+        for(let i=0;i<=0;i++){
+            boostArray[i].style.display = 'none';
+            boostArray[i+3].style.display = 'block';
+        }
     }
 })
-x5Boost.addEventListener('click', () => {
+boostArray[1].addEventListener('click', () => {
     if(scoreInfo.innerHTML >= 50) {
         boostInfo = 5;
         scoreInfo.innerHTML -= 25;
-        x5Boost.style.display = 'none';
-        x50Boost.style.display = 'block';
+        for(let i=0;i<=1;i++){
+            boostArray[i].style.display = 'none';
+            boostArray[i+3].style.display = 'block';
+
+        }
         appleIcon.style.filter = 'brightness(1.3) contrast(0.8) hue-rotate(30deg)';
     }
 })
-x10Boost.addEventListener('click', () => {
+boostArray[2].addEventListener('click', () => {
     if(scoreInfo.innerHTML >= 200) {
         boostInfo = 10;
         scoreInfo.innerHTML -= 100;
-        x10Boost.style.display = 'none';
-        x100Boost.style.display = 'block';
+        for(let i=0;i<=2;i++){
+            boostArray[i].style.display = 'none';
+            boostArray[i+3].style.display = 'block';
+
+        }
         appleIcon.style.filter = 'brightness(1.4) contrast(0.7) hue-rotate(45deg)';
     }
 })
-x25Boost.addEventListener('click', () => {
+boostArray[3].addEventListener('click', () => {
     if(scoreInfo.innerHTML >= 750) {
         boostInfo = 25;
         scoreInfo.innerHTML -= 600;
-        x25Boost.style.display = 'none';
-        x200Boost.style.display = 'block';
+        for(let i=0;i<=3;i++){
+            boostArray[i].style.display = 'none';
+            boostArray[i+3].style.display = 'block';
+
+        }
         appleIcon.setAttribute('src', 'IMG/apple2.png')
         appleIcon.style.filter = 'none';
     }
-
+    
 })
-x50Boost.addEventListener('click', () => {
+boostArray[4].addEventListener('click', () => {
     if(scoreInfo.innerHTML >= 1500) {
         boostInfo = 50;
         scoreInfo.innerHTML -= 1200;
-        x50Boost.style.display = 'none';
-        x400Boost.style.display = 'block';
+        for(let i=0;i<=4;i++){
+            boostArray[i].style.display = 'none';
+            boostArray[i+3].style.display = 'block';
+
+        }
         appleIcon.style.filter = 'brightness(1.1) contrast(0.99) hue-rotate(-19deg)';
-
+        
     }
-
+    
 })
-x100Boost.addEventListener('click', () => {
+boostArray[5].addEventListener('click', () => {
     if(scoreInfo.innerHTML >= 4000) {
         boostInfo = 100;
         scoreInfo.innerHTML -= 3000;
-        x100Boost.style.display = 'none';
-        x600Boost.style.display = 'block';
+        for(let i=0;i<=5;i++){
+            boostArray[i].style.display = 'none';
+            boostArray[i+3].style.display = 'block';
+        }
         appleIcon.style.filter = 'brightness(1.3) contrast(0.8) hue-rotate(-30deg)';
-
+        
     }
-
+    
 })
-x200Boost.addEventListener('click', () => {
+boostArray[6].addEventListener('click', () => {
     if(scoreInfo.innerHTML >= 7500) {
         boostInfo = 200;
         scoreInfo.innerHTML -= 5500;
-        x200Boost.style.display = 'none';
-        appleIcon.setAttribute('src', 'IMG/apple3.png')
+        for(let i=0;i<=6;i++){
+            boostArray[i].style.display = 'none';
+            boostArray[i+3].style.display = 'block';
+            
+        }
+        appleIcon.style.filter = 'brightness(1.4) contrast(0.7) hue-rotate(45deg)';
+        
     }
-
+    
 })
-x400Boost.addEventListener('click', () => {
+boostArray[7].addEventListener('click', () => {
     if(scoreInfo.innerHTML >= 12500) {
         boostInfo = 400;
         scoreInfo.innerHTML -= 1000;
-        x400Boost.style.display = 'none';
-        appleIcon.style.filter = 'brightness(1.1) contrast(0.99) hue-rotate(-19deg)';
+        for(let i=0;i<=7;i++){
+            boostArray[i].style.display = 'none';
+            boostArray[i+3].style.display = 'block';
 
+        }
+        appleIcon.setAttribute('src', 'IMG/apple3.png')
+        
     }
-
+    
 })
-x600Boost.addEventListener('click', () => {
+boostArray[8].addEventListener('click', () => {
     if(scoreInfo.innerHTML >= 20000) {
         boostInfo = 600;
         scoreInfo.innerHTML -= 15000;
-        x600Boost.style.display = 'none';
+        for(let i=0;i<=8;i++){
+            boostArray[i].style.display = 'none';
+            // boostArray[i+3].style.display = 'block';
+        }
+        appleIcon.style.filter = 'brightness(1.1) contrast(0.99) hue-rotate(-19deg)';
+        
+    }
+    
+})
+boostArray[9].addEventListener('click', () => {
+    if(scoreInfo.innerHTML >= 50000) {
+        boostInfo = 750;
+        scoreInfo.innerHTML -= 40000;
+        for(let i=0;i<=9;i++){
+            boostArray[i].style.display = 'none';
+            // boostArray[i+3].style.display = 'block';
+        }
         appleIcon.style.filter = 'brightness(1.3) contrast(0.8) hue-rotate(-30deg)';
-
+    }
+    
+})
+boostArray[10].addEventListener('click', () => {
+    if(scoreInfo.innerHTML >= 100000) {
+        boostInfo = 1000;
+        scoreInfo.innerHTML -= 80000;
+        for(let i=0;i<=10;i++){
+            boostArray[i].style.display = 'none';
+            // boostArray[i+3].style.display = 'block';
+        }
+        appleIcon.style.filter = 'brightness(1.4) contrast(0.7) hue-rotate(45deg)';
     }
 
 })

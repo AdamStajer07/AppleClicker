@@ -26,6 +26,9 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
+.main .apple {
+  position: relative;
+}
 .main .apple__img {
   width: clamp(300px, 90%, 600px);
   transition: all 0.5s ease;
