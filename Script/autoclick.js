@@ -49,7 +49,7 @@ autoClickArray[1].addEventListener('click', () => {
 })
 autoClickArray[2].addEventListener('click', () => {
     if(scoreInfo.innerHTML >= 2500) {
-        if(autoclickInfo != 10 || autoclickInfo != 25) {
+        if(autoclickInfo != 10 && autoclickInfo != 25) {
             setInterval(() => {
                 autoClick(autoclickInfo);
             }, 1000);
@@ -65,7 +65,7 @@ autoClickArray[2].addEventListener('click', () => {
 })
 autoClickArray[3].addEventListener('click', () => {
     if(scoreInfo.innerHTML >= 5000) {
-        if(autoclickInfo != 10 || autoclickInfo != 25 || autoclickInfo != 50) {
+        if(autoclickInfo != 10 && autoclickInfo != 25 && autoclickInfo != 50) {
             setInterval(() => {
                 autoClick(autoclickInfo);
             }, 1000);
@@ -81,7 +81,7 @@ autoClickArray[3].addEventListener('click', () => {
 })
 autoClickArray[4].addEventListener('click', () => {
     if(scoreInfo.innerHTML >= 10000) {
-        if(autoclickInfo != 10 || autoclickInfo != 25 || autoclickInfo != 50 || autoclickInfo != 100) {
+        if(autoclickInfo != 10 && autoclickInfo != 25 && autoclickInfo != 50 && autoclickInfo != 100) {
             setInterval(() => {
                 autoClick(autoclickInfo);
             }, 1000);
@@ -97,7 +97,7 @@ autoClickArray[4].addEventListener('click', () => {
 })
 autoClickArray[5].addEventListener('click', () => {
     if(scoreInfo.innerHTML >= 25000) {
-        if(autoclickInfo != 10 || autoclickInfo != 25 || autoclickInfo != 50 || autoclickInfo != 100 || autoclickInfo != 250) {
+        if(autoclickInfo != 10 && autoclickInfo != 25 && autoclickInfo != 50 && autoclickInfo != 100 && autoclickInfo != 250) {
             setInterval(() => {
                 autoClick(autoclickInfo);
             }, 1000);
