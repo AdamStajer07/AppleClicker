@@ -19,6 +19,11 @@ body {
   font-size: 6rem;
   color: #fff;
 }
+@media (max-width: 840px) {
+  .header__title {
+    font-size: 3rem;
+  }
+}
 
 .main {
   width: 80%;
@@ -26,8 +31,23 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
+@media (max-width: 840px) {
+  .main {
+    flex-direction: column;
+  }
+}
 .main .apple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
   position: relative;
+}
+@media (max-width: 840px) {
+  .main .apple {
+    margin: 1rem 0;
+  }
 }
 .main .apple__img {
   width: clamp(300px, 90%, 600px);
@@ -37,13 +57,44 @@ body {
   cursor: pointer;
   filter: brightness(0.9);
 }
+@media (max-width: 640px) {
+  .main .apple__img img {
+    text-align: center;
+    width: 70%;
+  }
+}
 .main .apple__score-container {
   color: #fff;
   font-size: 2rem;
-  text-indent: 10rem;
+  text-align: center;
+}
+@media (max-width: 840px) {
+  .main .apple__score-container {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 640px) {
+  .main .apple__score-container {
+    font-size: 1.5rem;
+  }
 }
 .main .upgrades-container {
   width: clamp(300px, 50%, 600px);
+}
+@media (max-width: 840px) {
+  .main .upgrades-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 640px) {
+  .main .upgrades-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .main .upgrade {
   color: #fff;
@@ -51,9 +102,35 @@ body {
 .main .upgrade__container {
   margin: 2rem 0;
 }
+@media (max-width: 840px) {
+  .main .upgrade__container {
+    width: 45%;
+    margin: 1rem auto;
+  }
+}
+@media (max-width: 640px) {
+  .main .upgrade__container {
+    width: 100%;
+    margin: 1rem auto;
+  }
+}
 .main .upgrade__title {
   font-size: 3rem;
   text-indent: 32px;
+}
+@media (max-width: 840px) {
+  .main .upgrade__title {
+    text-indent: 0;
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 640px) {
+  .main .upgrade__title {
+    text-indent: 0;
+    text-align: center;
+    font-size: 2rem;
+  }
 }
 .main .upgrade__div {
   width: clamp(300px, 60%, 500px);
@@ -69,8 +146,31 @@ body {
   cursor: pointer;
   background-color: #658300;
 }
+@media (max-width: 840px) {
+  .main .upgrade__div {
+    width: 85%;
+    text-align: center;
+  }
+}
+@media (max-width: 640px) {
+  .main .upgrade__div {
+    width: 90%;
+    margin: 1rem auto;
+    text-align: center;
+  }
+}
 .main .upgrade__text {
   color: #000;
   font-weight: bold;
   font-size: 1.75rem;
+}
+@media (max-width: 840px) {
+  .main .upgrade__text {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 640px) {
+  .main .upgrade__text {
+    font-size: 1.25rem;
+  }
 }/*# sourceMappingURL=main.css.map */

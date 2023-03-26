@@ -5,6 +5,9 @@
         text-align: center;
         font-size: 6rem;
         color: $white;
+        @include mq(medium) {
+            font-size: 3rem;
+        }
     }
 }
 .main {
@@ -13,8 +16,15 @@
     
     display: flex;
     justify-content: space-evenly;
+    @include mq(medium) {
+        flex-direction: column;   
+    }
     .apple {
+        @include flex(center, center, column);
         position: relative;
+        @include mq(medium) {
+            margin: 1rem 0;
+        }
         &__img {
             width: clamp(300px, 90%, 600px);
             transition: all 0.5s ease;
@@ -22,24 +32,65 @@
                 cursor: pointer;
                 filter: brightness(.9);
             }
+            @include mq(small) {
+                img {
+                    text-align: center;
+                    width: 70%;
+                }
+            }
         }
         &__score-container {
             color: $white;
             font-size: 2rem;
-            text-indent: 10rem;
+            text-align: center;
+            @include mq(medium) {
+                font-size: 1.75rem;
+            }
+            @include mq(small) {
+                font-size: 1.5rem;
+            }
         }
     }
     .upgrades-container {
         width: clamp(300px, 50%, 600px);
+        @include mq(medium) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        @include mq(small) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
     .upgrade {
         color: $white;
         &__container {
             margin: 2rem 0;
+            @include mq(medium) {
+                width: 45%;
+                margin: 1rem auto;
+            }
+            @include mq(small) {
+                width: 100%;
+                margin: 1rem auto;
+            }
         }
         &__title {
             font-size: 3rem;
             text-indent: 32px;
+            @include mq(medium) {
+                text-indent: 0;
+                text-align: center;
+                font-size: 2rem;
+            }
+            @include mq(small) {
+                text-indent: 0;
+                text-align: center;
+                font-size: 2rem;
+            }
         }
         &__div {
             width: clamp(300px, 60%, 500px);
@@ -53,12 +104,28 @@
                 cursor: pointer;
                 background-color: darken($green, 10%);
             }
+            @include mq(medium) {
+                width: 85%;
+                text-align: center;
+            }
+            @include mq(small) {
+                width: 90%;
+                margin: 1rem auto;
+                text-align: center;
+            }
+
             display: none;
         }
         &__text {
             color: $black;
             font-weight: bold;
             font-size: 1.75rem;
+            @include mq(medium) {
+                font-size: 1.5rem;
+            }
+            @include mq(small) {
+                font-size: 1.25rem;
+            }
         }
     }
 }

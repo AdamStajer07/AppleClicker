@@ -4,4 +4,13 @@
     align-items: $align-items;
     flex-direction: $flex-direction;
     flex-wrap: $flex-wrap;
+    @content;
+}
+@mixin mq($breakpoint: small) {
+    $size: map-get($breakpoints, $breakpoint);
+    @if($size) {
+        @media (#{$size}) {
+            @content;
+        }
+    }
 }

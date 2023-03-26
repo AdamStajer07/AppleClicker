@@ -3,3 +3,7 @@ $white: #fff;
 // defeult green color #8db600 
 // twice green color #65981d 
 $green: #8db600;
+$breakpoints: (
+    medium: "max-width: 840px",
+    small: "max-width: 640px",
+)
