@@ -9,6 +9,10 @@ const x400Boost = document.querySelector('.x400boost');
 const x600Boost = document.querySelector('.x600boost');
 const x750Boost = document.querySelector('.x750boost');
 const x1000Boost = document.querySelector('.x1000boost');
+const x2000Boost = document.querySelector('.x2000boost');
+const x3500Boost = document.querySelector('.x3500boost');
+const x5000Boost = document.querySelector('.x5000boost');
+const x7500Boost = document.querySelector('.x7500boost');
 
 const boostArray = [
     x2Boost,
@@ -21,7 +25,11 @@ const boostArray = [
     x400Boost,
     x600Boost,
     x750Boost,
-    x1000Boost
+    x1000Boost,
+    x2000Boost,
+    x3500Boost,
+    x5000Boost,
+    x7500Boost
 ]
 
 x2Boost.style.display = 'block';
@@ -127,8 +135,8 @@ boostArray[7].addEventListener('click', () => {
             boostArray[i+3].style.display = 'block';
 
         }
-        appleIcon.setAttribute('src', 'IMG/apple3.png')
-        
+        appleIcon.setAttribute('src', 'IMG/apple3.png');
+        appleIcon.style.filter = 'none';
     }
     
 })
@@ -138,7 +146,7 @@ boostArray[8].addEventListener('click', () => {
         scoreInfo.innerHTML -= 15000;
         for(let i=0;i<=8;i++){
             boostArray[i].style.display = 'none';
-            // boostArray[i+3].style.display = 'block';
+            boostArray[i+3].style.display = 'block';
         }
         appleIcon.style.filter = 'brightness(1.1) contrast(0.99) hue-rotate(-19deg)';
         
@@ -151,7 +159,7 @@ boostArray[9].addEventListener('click', () => {
         scoreInfo.innerHTML -= 40000;
         for(let i=0;i<=9;i++){
             boostArray[i].style.display = 'none';
-            // boostArray[i+3].style.display = 'block';
+            boostArray[i+3].style.display = 'block';
         }
         appleIcon.style.filter = 'brightness(1.3) contrast(0.8) hue-rotate(-30deg)';
     }
@@ -162,6 +170,55 @@ boostArray[10].addEventListener('click', () => {
         boostInfo = 1000;
         scoreInfo.innerHTML -= 80000;
         for(let i=0;i<=10;i++){
+            boostArray[i].style.display = 'none';
+            boostArray[i+3].style.display = 'block';
+        }
+        appleIcon.style.filter = 'brightness(1.4) contrast(0.7) hue-rotate(45deg)';
+    }
+
+})
+boostArray[11].addEventListener('click', () => {
+    if(scoreInfo.innerHTML >= 250000) {
+        boostInfo = 2000;
+        scoreInfo.innerHTML -= 200000;
+        for(let i=0;i<=11;i++){
+            boostArray[i].style.display = 'none';
+            boostArray[i+3].style.display = 'block';
+        }
+        appleIcon.setAttribute('src', 'IMG/apple4.png')
+        appleIcon.style.filter = 'none';
+    }
+
+})
+boostArray[12].addEventListener('click', () => {
+    if(scoreInfo.innerHTML >= 500000) {
+        boostInfo = 3500;
+        scoreInfo.innerHTML -= 400000;
+        for(let i=0;i<=12;i++){
+            boostArray[i].style.display = 'none';
+            // boostArray[i+3].style.display = 'block';
+        }
+        appleIcon.style.filter = 'brightness(1.1) contrast(0.99) hue-rotate(-19deg)';
+    }
+
+})
+boostArray[13].addEventListener('click', () => {
+    if(scoreInfo.innerHTML >= 1000000) {
+        boostInfo = 5000;
+        scoreInfo.innerHTML -= 900000;
+        for(let i=0;i<=13;i++){
+            boostArray[i].style.display = 'none';
+            // boostArray[i+3].style.display = 'block';
+        }
+        appleIcon.style.filter = 'brightness(1.3) contrast(0.8) hue-rotate(-30deg)';
+    }
+
+})
+boostArray[14].addEventListener('click', () => {
+    if(scoreInfo.innerHTML >= 1750000) {
+        boostInfo = 7500;
+        scoreInfo.innerHTML -= 1500000;
+        for(let i=0;i<=14;i++){
             boostArray[i].style.display = 'none';
             // boostArray[i+3].style.display = 'block';
         }
