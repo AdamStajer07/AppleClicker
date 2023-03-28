@@ -13,6 +13,8 @@ const x2000Boost = document.querySelector('.x2000boost');
 const x3500Boost = document.querySelector('.x3500boost');
 const x5000Boost = document.querySelector('.x5000boost');
 const x7500Boost = document.querySelector('.x7500boost');
+const x10000Boost = document.querySelector('.x1000boost');
+const x15000Boost = document.querySelector('.x15000boost');
 
 const boostArray = [
     x2Boost,
@@ -29,7 +31,9 @@ const boostArray = [
     x2000Boost,
     x3500Boost,
     x5000Boost,
-    x7500Boost
+    x7500Boost,
+    x10000Boost,
+    x15000Boost
 ]
 
 x2Boost.style.display = 'block';
@@ -196,7 +200,7 @@ boostArray[12].addEventListener('click', () => {
         scoreInfo.innerHTML -= 400000;
         for(let i=0;i<=12;i++){
             boostArray[i].style.display = 'none';
-            // boostArray[i+3].style.display = 'block';
+            boostArray[i+3].style.display = 'block';
         }
         appleIcon.style.filter = 'brightness(1.1) contrast(0.99) hue-rotate(-19deg)';
     }
@@ -208,7 +212,7 @@ boostArray[13].addEventListener('click', () => {
         scoreInfo.innerHTML -= 900000;
         for(let i=0;i<=13;i++){
             boostArray[i].style.display = 'none';
-            // boostArray[i+3].style.display = 'block';
+            boostArray[i+3].style.display = 'block';
         }
         appleIcon.style.filter = 'brightness(1.3) contrast(0.8) hue-rotate(-30deg)';
     }
@@ -223,6 +227,32 @@ boostArray[14].addEventListener('click', () => {
             // boostArray[i+3].style.display = 'block';
         }
         appleIcon.style.filter = 'brightness(1.4) contrast(0.7) hue-rotate(45deg)';
+    }
+
+})
+boostArray[15].addEventListener('click', () => {
+    if(scoreInfo.innerHTML >= 2500000) {
+        boostInfo = 10000;
+        scoreInfo.innerHTML -= 200000;
+        for(let i=0;i<=15;i++){
+            boostArray[i].style.display = 'none';
+            // boostArray[i+3].style.display = 'block';
+        }
+        appleIcon.setAttribute('src', 'IMG/apple5.png')
+        appleIcon.style.filter = 'none';
+    }
+
+})
+boostArray[16].addEventListener('click', () => {
+    if(scoreInfo.innerHTML >= 4000000) {
+        boostInfo = 15000;
+        scoreInfo.innerHTML -= 3000000;
+        for(let i=0;i<=16;i++){
+            boostArray[i].style.display = 'none';
+            // boostArray[i+3].style.display = 'block';
+        }
+        appleIcon.style.filter = 'brightness(1.1) contrast(0.99) hue-rotate(-19deg)';
+
     }
 
 })
