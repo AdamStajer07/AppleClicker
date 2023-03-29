@@ -7,6 +7,8 @@ const x500autoclick = document.querySelector('.x500autoclick');
 const x1000autoclick = document.querySelector('.x1000autoclick');
 const x2000autoclick = document.querySelector('.x2000autoclick');
 const x5000autoclick = document.querySelector('.x5000autoclick');
+const x7500autoclick = document.querySelector('.x7500autoclick');
+const x10000autoclick = document.querySelector('.x10000autoclick');
 
 const autoClickArray = [
     x10autoclick,
@@ -17,7 +19,9 @@ const autoClickArray = [
     x500autoclick,
     x1000autoclick,
     x2000autoclick,
-    x5000autoclick
+    x5000autoclick,
+    x7500autoclick,
+    x10000autoclick
 ]
 
 x10autoclick.style.display = 'block';
@@ -128,7 +132,7 @@ autoClickArray[6].addEventListener('click', () => {
         scoreInfo.innerHTML -= 60000;
         for(let i=0;i<=6;i++){
             autoClickArray[i].style.display = 'none';
-            // autoClickArray[i+3].style.display = 'block';
+            autoClickArray[i+3].style.display = 'block';
         }
         rotate();
     }
@@ -144,7 +148,7 @@ autoClickArray[7].addEventListener('click', () => {
         scoreInfo.innerHTML -= 150000;
         for(let i=0;i<=7;i++){
             autoClickArray[i].style.display = 'none';
-            // autoClickArray[i+3].style.display = 'block';
+            autoClickArray[i+3].style.display = 'block';
         }
         rotate();
     }
@@ -159,6 +163,38 @@ autoClickArray[8].addEventListener('click', () => {
         autoclickInfo = 3000;
         scoreInfo.innerHTML -= 600000;
         for(let i=0;i<=8;i++){
+            autoClickArray[i].style.display = 'none';
+            // autoClickArray[i+3].style.display = 'block';
+        }
+        rotate();
+    }
+})
+autoClickArray[9].addEventListener('click', () => {
+    if(scoreInfo.innerHTML >= 1250000) {
+        if(autoclickInfo != 10 && autoclickInfo != 25 && autoclickInfo != 50 && autoclickInfo != 100 && autoclickInfo != 250 && autoclickInfo != 500 && autoclickInfo != 1000 && autoclickInfo != 2000 && autoclickInfo != 5000) {
+            setInterval(() => {
+                autoClick(autoclickInfo);
+            }, 1000);
+        }
+        autoclickInfo = 7500;
+        scoreInfo.innerHTML -= 1000000;
+        for(let i=0;i<=9;i++){
+            autoClickArray[i].style.display = 'none';
+            // autoClickArray[i+3].style.display = 'block';
+        }
+        rotate();
+    }
+})
+autoClickArray[10].addEventListener('click', () => {
+    if(scoreInfo.innerHTML >= 750000) {
+        if(autoclickInfo != 10 && autoclickInfo != 25 && autoclickInfo != 50 && autoclickInfo != 100 && autoclickInfo != 250 && autoclickInfo != 500 && autoclickInfo != 1000 && autoclickInfo != 2000 && autoclickInfo != 5000 && autoclickInfo != 7500) {
+            setInterval(() => {
+                autoClick(autoclickInfo);
+            }, 1000);
+        }
+        autoclickInfo = 10000;
+        scoreInfo.innerHTML -= 1500000;
+        for(let i=0;i<=10;i++){
             autoClickArray[i].style.display = 'none';
             // autoClickArray[i+3].style.display = 'block';
         }
