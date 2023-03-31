@@ -1,7 +1,6 @@
+const upgradeContainer = document.querySelector('.upgrade__container');
 const appleIcon = document.querySelector('.apple__img');
 let scoreInfo = document.querySelector('.apple__score');
-let boostInfo = 1;
-let autoclickInfo = 0;
 let rotateInfo = 30;
 
 const boost = (boost) => {
@@ -25,10 +24,6 @@ const rotate = () => {
 }
 
 appleIcon.addEventListener('click', () => {
-    rotate();
-    boost(boostInfo);
-    console.log("add point - work");
+        rotate();
+        boost(boostInfo);
 })
-
-
-

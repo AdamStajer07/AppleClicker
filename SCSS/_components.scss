@@ -52,10 +52,14 @@
         }
     }
     .upgrades-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: clamp(300px, 50%, 600px);
         @include mq(medium) {
             width: 100%;
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
         }
         @include mq(small) {
@@ -114,7 +118,7 @@
                 text-align: center;
             }
 
-            display: none;
+            // display: none;
         }
         &__text {
             color: $black;

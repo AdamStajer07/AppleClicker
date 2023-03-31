@@ -79,12 +79,16 @@ body {
   }
 }
 .main .upgrades-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: clamp(300px, 50%, 600px);
 }
 @media (max-width: 840px) {
   .main .upgrades-container {
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 }
@@ -140,7 +144,6 @@ body {
   padding: 1rem;
   border-radius: 1rem;
   transition: background-color 0.5s;
-  display: none;
 }
 .main .upgrade__div:hover {
   cursor: pointer;
