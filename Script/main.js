@@ -1,4 +1,3 @@
-const upgradeContainer = document.querySelector('.upgrade__container');
 const appleIcon = document.querySelector('.apple__img');
 let scoreInfo = document.querySelector('.apple__score');
 let rotateInfo = 30;
@@ -7,7 +6,6 @@ const boost = (boost) => {
     for(let i=0;i<boost;i++) {
         scoreInfo.innerHTML++;
     }
-    console.log('boost - work')
 }
 
 const autoClick = (autoclick) => {
@@ -15,7 +13,6 @@ const autoClick = (autoclick) => {
         scoreInfo.innerHTML++;
     }
     rotate();
-    console.log('autoclick - work')
 }
 
 const rotate = () => {

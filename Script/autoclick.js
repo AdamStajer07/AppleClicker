@@ -9,8 +9,8 @@ autoclickBox.addEventListener('click', () => {
             autoClick(autoclickInfo);
         }, 1000);
     }
-    if(scoreInfo.innerHTML >= autoclickTextPoints)
-    scoreInfo.innerHTML -= (autoclickTextPoints*0.9).toFixed(0);
+    if(scoreInfo.innerHTML >= autoclickTextPoints) {
+        scoreInfo.innerHTML -= (autoclickTextPoints*0.9).toFixed(0);
         autoclickInfo = Math.ceil(autoclickInfo * 1.25);
         autoclickTextPoints = Math.ceil((autoclickInfo * 50) * 2);
         let text = `<span class="upgrade__text">x${Math.ceil(autoclickInfo * 1.25)} (${Math.ceil((autoclickInfo * 50) * 2)} apples)</span>`;
@@ -18,5 +18,6 @@ autoclickBox.addEventListener('click', () => {
 
         twiceFilter += 2;
         appleIcon.style.filter = `brightness(${firstFilter}) contrast(0.99) hue-rotate(${twiceFilter}deg)`;
+    }
 
 })

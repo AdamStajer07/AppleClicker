@@ -11,7 +11,6 @@ body {
 }
 
 .header {
-  width: 80%;
   margin: 3rem auto;
 }
 .header__title {
@@ -26,10 +25,13 @@ body {
 }
 
 .main {
-  width: 80%;
-  margin: auto;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  margin: auto;
+  width: 80%;
 }
 @media (max-width: 840px) {
   .main {
@@ -42,7 +44,6 @@ body {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  position: relative;
 }
 @media (max-width: 840px) {
   .main .apple {
@@ -51,16 +52,15 @@ body {
 }
 .main .apple__img {
   width: clamp(300px, 90%, 600px);
-  transition: all 0.5s ease;
+  transition: rotate 0.5s ease;
 }
 .main .apple__img:hover {
   cursor: pointer;
-  filter: brightness(0.9);
 }
 @media (max-width: 640px) {
   .main .apple__img img {
-    text-align: center;
     width: 70%;
+    text-align: center;
   }
 }
 .main .apple__score-container {
@@ -80,24 +80,24 @@ body {
 }
 .main .upgrades-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: none;
+  flex-direction: column;
+  flex-wrap: wrap;
   width: clamp(300px, 50%, 600px);
 }
 @media (max-width: 840px) {
   .main .upgrades-container {
-    width: 100%;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
   }
 }
 @media (max-width: 640px) {
   .main .upgrades-container {
-    width: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
   }
 }
 .main .upgrade {
@@ -108,19 +108,19 @@ body {
 }
 @media (max-width: 840px) {
   .main .upgrade__container {
-    width: 45%;
     margin: 1rem auto;
+    width: 45%;
   }
 }
 @media (max-width: 640px) {
   .main .upgrade__container {
-    width: 100%;
     margin: 1rem auto;
+    width: 100%;
   }
 }
 .main .upgrade__title {
   font-size: 3rem;
-  text-indent: 32px;
+  text-indent: 3rem;
 }
 @media (max-width: 840px) {
   .main .upgrade__title {
@@ -137,12 +137,12 @@ body {
   }
 }
 .main .upgrade__div {
-  width: clamp(300px, 60%, 500px);
-  background-color: #8db600;
-  min-height: 30px;
   margin: 1rem;
   padding: 1rem;
+  width: clamp(300px, 60%, 500px);
+  min-height: 30px;
   border-radius: 1rem;
+  background-color: #8db600;
   transition: background-color 0.5s;
 }
 .main .upgrade__div:hover {
@@ -157,15 +157,15 @@ body {
 }
 @media (max-width: 640px) {
   .main .upgrade__div {
-    width: 90%;
     margin: 1rem auto;
+    width: 90%;
     text-align: center;
   }
 }
 .main .upgrade__text {
   color: #000;
-  font-weight: bold;
   font-size: 1.75rem;
+  font-weight: bold;
 }
 @media (max-width: 840px) {
   .main .upgrade__text {
